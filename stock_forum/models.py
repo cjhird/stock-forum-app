@@ -28,7 +28,6 @@ class Thread(models.Model):
     stock_sector = models.CharField(max_length=30, choices=STOCK_INDUSTRY_OPTIONS, default=None)
     text = models.TextField(max_length=3000, default=None)
     stock_rating = models.CharField(max_length=20, choices=STOCK_RATING_OPTIONS, default=None)
-    image = models.CharField(max_length=300, default=None)
     owner = models.ForeignKey(
         'jwt_auth.User',
         related_name='threads',
