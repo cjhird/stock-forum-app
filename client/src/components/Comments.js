@@ -21,7 +21,7 @@ const Comments = ({ getData }) => {
   const handleSubmitComment = async (e) => {
     e.preventDefault()
     try {
-      await axios.post('http://localhost:8000/api/comments/', comment, {
+      await axios.post('/api/comments/', comment, {
         headers: {
           Authorization: `Bearer ${getTokenFromLocalStorage()}`,
         },

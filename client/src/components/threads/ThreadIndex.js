@@ -21,7 +21,7 @@ const ThreadIndex = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get('http://localhost:8000/api/forum/')
+        const { data } = await axios.get('/api/forum/')
         console.log('GET all data --->', data)
         setThreads(data)
       } catch (err) {

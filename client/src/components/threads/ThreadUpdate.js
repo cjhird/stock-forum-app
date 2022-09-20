@@ -23,7 +23,7 @@ const ThreadUpdate = () => {
   useEffect(() => {
     setLoading(true)
     const getData = async () => {
-      const { data } = await axios.get(`http://localhost:8000/api/forum/${id}/`)
+      const { data } = await axios.get(`/api/forum/${id}/`)
       setFormData(data)
       setLoading(false)
     }
@@ -40,15 +40,11 @@ const ThreadUpdate = () => {
     formData.owner = payload.sub
 
     try {
-      const { data } = await axios.put(
-        `http://localhost:8000/api/forum/${id}/`,
-        formData,
-        {
-          headers: {
-            Authorization: `Bearer ${getTokenFromLocalStorage()}`,
-          },
-        }
-      )
+      const { data } = await axios.put(`/api/forum/${id}/`, formData, {
+        headers: {
+          Authorization: `Bearer ${getTokenFromLocalStorage()}`,
+        },
+      })
       navigate(`/threads/${id}`)
     } catch (err) {
       console.log(err)

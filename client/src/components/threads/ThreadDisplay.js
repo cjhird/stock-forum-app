@@ -17,7 +17,7 @@ const ThreadDisplay = () => {
 
   // Get a single thread
   const getData = async () => {
-    const { data } = await axios.get(`http://localhost:8000/api/forum/${id}/`)
+    const { data } = await axios.get(`/api/forum/${id}/`)
     console.log(data)
     setThread(data)
   }
@@ -30,7 +30,7 @@ const ThreadDisplay = () => {
   // DELETE the thread
   const handleRemoveBtn = async () => {
     try {
-      await axios.delete(`http://localhost:8000/api/forum/${id}/`, {
+      await axios.delete(`/api/forum/${id}/`, {
         headers: {
           Authorization: `Bearer ${getTokenFromLocalStorage()}`,
         },
@@ -50,14 +50,11 @@ const ThreadDisplay = () => {
   const handleDeleteComment = async (e) => {
     e.preventDefault()
     try {
-      await axios.delete(
-        `http://localhost:8000/api/comments/${e.target.value}/`,
-        {
-          headers: {
-            Authorization: `Bearer ${getTokenFromLocalStorage()}`,
-          },
-        }
-      )
+      await axios.delete(`/api/comments/${e.target.value}/`, {
+        headers: {
+          Authorization: `Bearer ${getTokenFromLocalStorage()}`,
+        },
+      })
       getData()
     } catch (error) {
       console.log(error)

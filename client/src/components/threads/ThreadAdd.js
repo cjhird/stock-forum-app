@@ -29,15 +29,11 @@ const ThreadAdd = () => {
     console.log(formData)
 
     try {
-      const { data } = await axios.post(
-        'http://localhost:8000/api/forum/',
-        formData,
-        {
-          headers: {
-            Authorization: `Bearer ${getTokenFromLocalStorage()}`,
-          },
-        }
-      )
+      const { data } = await axios.post('/api/forum/', formData, {
+        headers: {
+          Authorization: `Bearer ${getTokenFromLocalStorage()}`,
+        },
+      })
       navigate(`/threads/${data.id}`)
     } catch (err) {
       console.log(err)

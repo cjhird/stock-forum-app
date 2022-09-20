@@ -26,10 +26,7 @@ const Login = () => {
     e.preventDefault()
 
     try {
-      const { data } = await axios.post(
-        'http://localhost:8000/api/auth/login/',
-        formData
-      )
+      const { data } = await axios.post('/api/auth/login/', formData)
       setTokenToLocalStorage(data.token)
       navigate('/threads')
       console.log('data token --->', data)
