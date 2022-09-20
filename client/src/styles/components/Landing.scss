@@ -1,0 +1,37 @@
+body {
+  background-color: rgb(240, 240, 240);
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15rem;
+  height: 100vh;
+}
+
+.landing-cont {
+  width: 55rem;
+  height: 20rem;
+  align-items: center;
+  padding: 2rem 2rem 2rem 2rem;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+
+.landing-cont h4 {
+  margin-top: 2rem;
+}
+
+.landing-btn {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.landing-btn Button {
+  width: 10rem;
+  height: 3rem;
+}

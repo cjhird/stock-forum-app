@@ -1,0 +1,53 @@
+body {
+  background-color: rgb(240, 240, 240);
+}
+
+.index-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  height: 100vh;
+}
+
+.page-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  align-items: center;
+  padding: 2rem 2rem 2rem 2rem;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+
+.index-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.index-search input {
+  width: 30rem;
+  height: 2.5rem;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+}
+
+Table a {
+  text-decoration: none;
+  color: black;
+}
+
+.index-title {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}

@@ -1,0 +1,45 @@
+body {
+  background-color: rgb(240, 240, 240);
+}
+
+.threadupdate-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+
+.threadupdate-form {
+  margin-top: 5rem;
+  width: 45rem;
+  height: 50rem;
+  align-items: center;
+  padding: 2rem 2rem 2rem 2rem;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+
+.threadupdate-title {
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-btn {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.form-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form-login {
+  margin-left: 1rem;
+  text-decoration: none;
+}
