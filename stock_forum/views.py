@@ -14,13 +14,8 @@ from .serializers.populated import PopulatedThreadSerializer
 # import permissions 
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
-# -----------------
-
-# Create your views here.
 class ThreadListView(APIView):
-
   permission_classes = (IsAuthenticatedOrReadOnly, )
-
   # GET - Get all threads
   def get(self, _request):
     threads = Thread.objects.all()
@@ -42,9 +37,7 @@ class ThreadListView(APIView):
 
 
 class ThreadDetailView(APIView):
-
   permission_classes = (IsAuthenticatedOrReadOnly, )
-
   # Find a specific thread
   def get_thread(self, pk):
     try:
