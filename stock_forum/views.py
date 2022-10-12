@@ -3,15 +3,10 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.exceptions import NotFound
-
 from comments.serializers.populated import PopulatedCommentSerializer
-
-# custom imports
 from .models import Thread
 from .serializers.common import ThreadSerializer
 from .serializers.populated import PopulatedThreadSerializer
-
-# import permissions 
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 class ThreadListView(APIView):
