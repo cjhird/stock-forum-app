@@ -60,7 +60,7 @@ The snippet below is the models.py file which establishes the type of data being
 
 ![image info](./media/rm8.png)
 
-## Authentication.py
+**authentication.py**
 
 The next step in building the user authentication system was to develop the auth middleware which is displayed in the authentication.py code snippet. Here we can see the user model being imported as well as the Basic Authentication, PermissionDenied, and JWT packages. The logic in this code snippet determines if a user request has been sent with an access token. In doing this task the code will decode the bearer token in the headers of the request using JWT and the secret key stored in the settings.py file and determine if the payload/token is valid. If the token is valid then return with user data. If the token is found to be not valid or if it fails any of the checks then an error message is raised through the PermissionDenied package. This authentication logic can then be imported into other components or parts of the project to easily authenticate users.
 
