@@ -15,8 +15,6 @@ from .serializers.common import UserSerializer
 from django.contrib.auth import get_user_model
 User = get_user_model()
 
-# create your views here
-
 # Register
 class RegisterView(APIView):
 
